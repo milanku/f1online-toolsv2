@@ -206,6 +206,7 @@ export default function Index() {
   const [questions, setQuestions] = useState([]);
   const [winnerTexts, setWinnerTexts] = useState([]);
   const [loadedFromFile, setLoadedFromFile] = useState(false);
+  const [errors, setErrors] = useState("");
 
   useEffect(() => {
     //addWinnerText();
@@ -289,7 +290,7 @@ export default function Index() {
         errors = `${errors}\n${index + 1}. úroveň hodnotenia nemá komentár`;
       }
     }
-
+    setErrors(errors);
     return errors;
   };
 
@@ -383,6 +384,7 @@ export default function Index() {
       setWinnerTexts([]);
     }
   }, [loadedFromFile]);
+  console.log(errors.split("\n"));
 
   return (
     <div>
@@ -521,6 +523,10 @@ export default function Index() {
           <span>Vyrobiť kvíz</span>
         </Button>
       </ButtonsRow>
+      {errors.split("\n").map((error, index) => {
+        if (index === 0) return;
+        return <p key={index}>{`CHYBA: ${error}`}</p>;
+      })}
     </div>
   );
 }
