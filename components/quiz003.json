@@ -1,0 +1,260 @@
+{
+  "quizTitle": "Technické inovácie a novinky",
+  "quizSynopsis": "V nasledujúcom kvíze sme pripravili otázky o niektorých šikovných aj nešikovných trikoch a technických inováciách. Ako dobre ich poznáš?",
+  "questions": [
+    {
+      "question": "Od predstavenia aktívnych závesov nám uplynulo už viac ako 30 rokov. Ktorý tím sa nimi preslávil najviac?",
+      "questionPic": "",
+      "answerSelectionType": "single",
+      "points": 1,
+      "answers": [
+        "McLaren",
+        "Williams",
+        "Ferrari",
+        "Brabham"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "explanation": "Využitie aktívnych závesov vyšperkoval do dokonalosti tím pod vedením Patricka Heada, ktorý v sezónach 1992 a 1993 absolútne ovládol šampionáty F1. Samozrejme, je to Williams.",
+      "questionType": "text"
+    },
+    {
+      "question": "Aerodynamické oddelenia pri vývoji áut intenzívne využívajú vír Y250. Ktorý komponent ho vytvára?",
+      "questionPic": "",
+      "answerSelectionType": "single",
+      "points": 1,
+      "answers": [
+        "Deflektory",
+        "Zadné krídlo",
+        "Difúzor",
+        "Predné krídlo"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "explanation": "Vír Y250 generuje vnútorná časť lopatiek predného krídla. Jeho úlohou je pomôcť odkláňať turbulentný vzduch od predného kolesa smerom preč od auta.",
+      "explanationPic": "https://wpadmin.f1online.sk/wp-content/uploads/FG-cplZX0AI9MnO.jpeg",
+      "questionType": "text"
+    },
+    {
+      "question": "V sezóne 2022 sa do Formuly 1 vracia ground effect, alebo prísavný efekt. Do kráľovnej motoršportu ho ako prvý priniesol Lotus. Zásluhou ktorého konštruktéra?",
+      "questionPic": "https://wpadmin.f1online.sk/wp-content/uploads/E6WA2XCVUAomXBT.jpeg",
+      "answerSelectionType": "single",
+      "points": 1,
+      "answers": [
+        "Gordon Murray",
+        "Adrian Newey",
+        "Colin Chapman",
+        "Patrick Head"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "explanation": "Prvú konkurencieschopnú verziu prísavného efektu priniesol Lotus 78, ktorý konštruoval tím pod Colinom Chapmanom.",
+      "questionType": "text"
+    },
+    {
+      "question": "Nosná otázka: Teraz sa vráťme do sezóny 2014 a pouvažujme, ktorý tím nepatrí k ostatným trom?",
+      "questionPic": "",
+      "answerSelectionType": "single",
+      "points": 1,
+      "answers": [
+        "Lotus",
+        "Caterham",
+        "McLaren",
+        "Toro Rosso"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "Ako sme načrtli v otázke, ide tu o nos. Caterham, McLaren aj Toro Rosso ho mali symetrický, Lotus sa však rozhodol spraviť si nosy dva. Jeden z nich bol dlhší ako druhý.",
+      "explanationPic": "https://wpadmin.f1online.sk/wp-content/uploads/nosy2014.jpg",
+      "questionType": "text"
+    },
+    {
+      "question": "Mercedes v sezóne 2020 predstavil systém DAS. Čo mal na monoposte meniť?",
+      "questionPic": "https://wpadmin.f1online.sk/wp-content/uploads/SI202011010134_news.jpg",
+      "answerSelectionType": "single",
+      "points": 1,
+      "answers": [
+        "Rázvor kolies",
+        "Svetlú výšku",
+        "Zbiehavosť predných kolies",
+        "Brzdný balans"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "explanation": "Systém DAS menil zbiehavosť predných kolies. Vďaka tomu piloti Mercedesu dokázali zohrievať predné pneumatiky aj na rovinkách.",
+      "questionType": "text"
+    },
+    {
+      "question": "Kedy sa vo Formule 1 prvýkrát začala turboéra?",
+      "questionPic": "",
+      "answerSelectionType": "single",
+      "points": 1,
+      "answers": [
+        "2014",
+        "1977",
+        "1989",
+        "2005"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "explanation": "Ako prvý predstavil preplňovaný motor Renault, a to už v sezóne 1977. Vtedy sa začala prvá turboéra, dnes žijeme jej ďalšiu kapitolu.",
+      "questionType": "text"
+    },
+    {
+      "question": "Ktoré z týchto tímov v úvode roka 2009 nevyužívali tzv. dvojitý difúzor?",
+      "questionPic": "https://wpadmin.f1online.sk/wp-content/uploads/EURBwRJWAAACmb9.jpeg",
+      "answerSelectionType": "multiple",
+      "points": 1,
+      "answers": [
+        "Brawn",
+        "Red Bull",
+        "Williams",
+        "Toyota",
+        "Ferrari",
+        "Renault"
+      ],
+      "correctAnswers": [
+        1,
+        4,
+        5
+      ],
+      "explanation": "Aj keď sa v súvislosti so sezónou 2009 a dvojitým difúzorom častokrát skloňuje len Brawn GP, tento trik objavili aj vo Williamse a v Toyote. Ostatní začali vyvíjať podobné riešenia až v priebehu roka.",
+      "questionType": "text"
+    },
+    {
+      "question": "Tyrrell je dodnes jediným tímom, ktorý v pretekoch nasadil šesťkolesový monopost. Podobné autá však testovalo viacero tímov, len jeden z nasledujúcich taký monopost nikdy neskonštruoval. Ktorý?",
+      "questionPic": "https://wpadmin.f1online.sk/wp-content/uploads/Dfju0MCWkAA5FS6.jpeg",
+      "answerSelectionType": "single",
+      "points": 1,
+      "answers": [
+        "Ferrari",
+        "Williams",
+        "March",
+        "McLaren"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "explanation": "Williams, Ferrari aj March sa inšpirovali Tyrrellom a skúšali niečo podobné, hoci všetky tri stajne si povedali, že lepšie by bolo mať štyri kolesá vzadu a nie vpredu.",
+      "explanationPic": "https://wpadmin.f1online.sk/wp-content/uploads/sixwheelers-51sa586.jpg",
+      "questionType": "text"
+    },
+    {
+      "question": "Výfuk býva vzadu, to vie aj malé dieťa. Jeden tím sa však v sezóne 2011 \"zbláznil\" a výfuk umiestnil dopredu pred bočnice. Poznáš ho?",
+      "questionPic": "https://wpadmin.f1online.sk/wp-content/uploads/14-sunday-lecastellet.jpg",
+      "answerSelectionType": "single",
+      "points": 1,
+      "answers": [
+        "Williams",
+        "HRT",
+        "Lotus",
+        "Mercedes"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "explanation": "V roku 2011 boli fúkané difúzory zakázané, inžinieri teda museli prísť na to, ako inak čo najlepšie využiť výfukové plyny. V Lotuse si povedali, že ich chcú fúkať pod podlahu ešte pred bočnicami a takto vytvárať prítlak v tejto výhodnej oblasti, teda v strede auta.",
+      "explanationPic": "https://wpadmin.f1online.sk/wp-content/uploads/FG-cplZX0Ac1d52I9MnO.jpg",
+      "questionType": "text"
+    },
+    {
+      "question": "Akú doposiaľ nevídanú inováciu priniesol do F1 Brabham?",
+      "questionPic": "",
+      "answerSelectionType": "single",
+      "points": 1,
+      "answers": [
+        "Laserový prenos dát z telemetrie",
+        "Auto s fénom",
+        "Trakčnú kontrolu",
+        "Zadné krídlo"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "explanation": "Slávne fénové auto Brabhamu malo obrovský potenciál, no odjazdilo len jednu veľkú cenu (ktorú vyhralo). Hoci FIA nezakázala jeho nasadenie, ako to tvrdia mnohé zdroje, majiteľ tímu Bernie Ecclestone sa ho rozhodol odstaviť sám. Ako šéf Asociácie konštruktérov F1 FOCA si nechcel pohnevať ostatné tímy, ktoré zúrili.",
+      "questionType": "text"
+    },
+    {
+      "question": "Technické vychytávky neprinášajú len tímy, ale aj FIA v snahe zvyšovať bezpečnosť áut. V roku 2003 sme takto spoznali tzv. HANS. Čo je to?",
+      "questionPic": "",
+      "answerSelectionType": "single",
+      "points": 1,
+      "answers": [
+        "Ochrana hlavy a krku",
+        "Automatizovaný hasiaci prístroj",
+        "Špeciálna ohňuvzdorná tkanina",
+        "Typ bezpečnostných pásov"
+      ],
+      "correctAnswers": [
+        0
+      ],
+      "explanation": "Systém HANS chráni jazdcov krk v prípade čelného nárazu tým, že jazdcovi nedovolí po náraze prudko predkloniť hlavu.",
+      "questionType": "text"
+    },
+    {
+      "question": "S bezpečnosťou súviselo aj zavedenie drážkovaných pneumatík. Aký priniesli efekt?",
+      "questionPic": "https://wpadmin.f1online.sk/wp-content/uploads/Co1rBlFXEAAHpjX.jpeg",
+      "answerSelectionType": "single",
+      "points": 1,
+      "answers": [
+        "Zlepšili grip",
+        "Nahnevali Maxa Mosleyho",
+        "Zlepšili tepelné vlastnosti gumy",
+        "Spomalili autá v zákrutách"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "explanation": "Zaviesť drážky v pneumatikách bol lacný spôsob, ako zmenšiť grip pneumatík a tým pádom aj rýchlosť v zákrutách. Max Mosley veril, že vďaka tomu bude jazda v monopostoch bezpečnejšia.",
+      "questionType": "text"
+    },
+    {
+      "question": "Tímy sa počas kvalifikácie bežne rozhodnú nasadiť Gurneyho klapku. Ako sa tým zmenia charakteristiky auta?",
+      "questionPic": "",
+      "answerSelectionType": "multiple",
+      "points": 1,
+      "answers": [
+        "Na rovinkách dosiahne lepšiu maximálku",
+        "Zvýši sa prítlak",
+        "Zvýši sa odpor auta",
+        "Dá sa viac otvoriť zadné krídlo"
+      ],
+      "correctAnswers": [
+        1,
+        2
+      ],
+      "explanation": "Gurneyho klapka je pravouhlá lišta, ktorá sa priliepa na koniec krídla tak, aby jedna polovica \"vytŕčala\" do priestoru. Je to veľmi flexibilný spôsob, ako zvýšiť prítlak krídla, aj keď za cenu mierneho zvýšenia odporu.  No keď musíš, tak musíš...",
+      "explanationPic": "https://wpadmin.f1online.sk/wp-content/uploads/SI202011150192_news.jpg",
+      "questionType": "text"
+    }
+  ],
+  "winnerTexts": [
+    {
+      "maxPtsLoss": 0,
+      "text": "Z teba by bol konštruktér! V technike máš vynikajúci prehľad, hneď posielaj Adrianovi Neweymu životopis!",
+      "pic": "https://wpadmin.f1online.sk/wp-content/uploads/AP-2418QVEMW2111_news.jpg"
+    },
+    {
+      "maxPtsLoss": 2,
+      "text": "Niečo ti ušlo, ale stále vynikajúci výsledok! S fyzickým svetom sa dobre kamarátiš.",
+      "pic": "https://wpadmin.f1online.sk/wp-content/uploads/FDTfBS8XEAALmWL.jpeg"
+    },
+    {
+      "maxPtsLoss": 5,
+      "text": "Vyslúžilec zo stredu poľa, občas si klikneš aj na technický článok, ale asi by si viac privítal pozíciu športového riaditeľa ako bossa technického oddelenia.",
+      "pic": "https://wpadmin.f1online.sk/wp-content/uploads/E0Y8o2IXsAIwttk.jpeg"
+    },
+    {
+      "maxPtsLoss": 12,
+      "text": "Tvár Adriana Neweyho skamenela ;)",
+      "pic": "https://wpadmin.f1online.sk/wp-content/uploads/AP-1ZSYX9CVD2111_news.jpg"
+    }
+  ],
+  "quizType": "guess"
+}

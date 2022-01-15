@@ -5,6 +5,14 @@ body {
   color: #333;
   font-family: "Nunito";
   font-size: 16px;
+  margin: 0;
+}
+textarea,
+input {
+  font-family: "Nunito";
+}
+textarea {
+  overflow: scroll;
 }
 a {
   color: #333;

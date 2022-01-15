@@ -16,18 +16,33 @@ const QuestionInput = (props) => {
   const {
     index,
     onDelete,
-    showAddQuestion,
+    answerAddEnabled,
     onAddAnswer,
     value,
     onValueChange,
     questionPic,
     onSetQuestionPic,
+    explanationPic,
+    onExplanationPicChange,
   } = props;
 
   return (
     <>
-      <S.RowQuestionContainer>
-        <label>{`${index + 1}.`}</label>
+      <S.RowQuestionContainer
+        className={
+          questionPic && explanationPic
+            ? "minusTwo"
+            : questionPic || explanationPic
+            ? "minusOne"
+            : ""
+        }
+      >
+        <div>
+          <label>{`${index + 1}.`}</label>
+          <S.Button className="red" onClick={() => onDelete()} tabIndex="-1">
+            <FontAwesomeIcon icon={faTrashAlt} />
+          </S.Button>
+        </div>
         <textarea
           rows="2"
           placeholder="Znenie otázky"
@@ -37,50 +52,94 @@ const QuestionInput = (props) => {
         />
         <S.Button
           tabIndex="-1"
-          disabled={questionPic}
-          className="withText neutral"
-          onClick={() => onSetQuestionPic("none")}
-        >
-          <FontAwesomeIcon icon={faPlus} />
-          <span>Pridať fotku</span>
-        </S.Button>
-        <S.Button
-          tabIndex="-1"
-          disabled={!showAddQuestion}
-          className="withText neutral"
+          disabled={!answerAddEnabled}
+          className="withText neutral halfwidth"
           onClick={() => onAddAnswer()}
         >
           <FontAwesomeIcon icon={faPlus} />
-          <span>Pridať odpoveď</span>
+          <span>Odpoveď</span>
         </S.Button>
         <S.Button
-          className="red withText"
-          onClick={() => onDelete()}
           tabIndex="-1"
+          disabled={questionPic}
+          className="withText neutral halfwidth"
+          onClick={() => onSetQuestionPic("none")}
         >
-          <FontAwesomeIcon icon={faTrashAlt} />
-          <span>Zmazať otázku</span>
+          <FontAwesomeIcon icon={faPlus} />
+          <span>Fotka k otázke</span>
+        </S.Button>
+        <S.Button
+          tabIndex="-1"
+          disabled={explanationPic}
+          className="withText neutral"
+          onClick={() => onExplanationPicChange("none")}
+        >
+          <FontAwesomeIcon icon={faPlus} />
+          <span>Fotka k vysvetleniu</span>
         </S.Button>
       </S.RowQuestionContainer>
       {questionPic && (
-        <S.QuestionPicContainer>
-          <label htmlFor={`photopic${index}`}>Foto:</label>
-          <input
-            id={`photopic${index}`}
-            placeholder="Link na fotku k otázke"
-            value={questionPic !== "none" ? questionPic : ""}
-            onChange={(e) =>
-              onSetQuestionPic(e.target.value ? e.target.value : "none")
-            }
-          />
-          <S.Button
-            className="red"
-            onClick={() => onSetQuestionPic("")}
-            tabIndex="-1"
-          >
-            <FontAwesomeIcon icon={faTrashAlt} />
-          </S.Button>
-          {questionPic !== "none" && <img src={questionPic} />}
+        <S.QuestionPicContainer className={questionPic ? "" : "noshow"}>
+          <>
+            <img
+              src={
+                questionPic === "none"
+                  ? "https://wpadmin.f1online.sk/wp-content/uploads/title-logo-wb.png"
+                  : questionPic
+              }
+            />
+            <span className="picTitle">Foto k otázke</span>
+            <div>
+              <input
+                id={`photopic${index}`}
+                placeholder="Link na fotku k otázke"
+                value={questionPic !== "none" ? questionPic : ""}
+                onChange={(e) =>
+                  onSetQuestionPic(e.target.value ? e.target.value : "none")
+                }
+              />
+              <S.Button
+                className="red"
+                onClick={() => onSetQuestionPic("")}
+                tabIndex="-1"
+              >
+                <FontAwesomeIcon icon={faTrashAlt} />
+              </S.Button>
+            </div>
+          </>
+        </S.QuestionPicContainer>
+      )}
+      {explanationPic && (
+        <S.QuestionPicContainer className={questionPic ? "" : "noshow"}>
+          <>
+            <img
+              src={
+                explanationPic === "none"
+                  ? "https://wpadmin.f1online.sk/wp-content/uploads/title-logo-wb.png"
+                  : explanationPic
+              }
+            />
+            <span className="picTitle">Foto k vysvetleniu</span>
+            <div>
+              <input
+                id={`photopic${index}`}
+                placeholder="Link na fotku k otázke"
+                value={explanationPic !== "none" ? explanationPic : ""}
+                onChange={(e) =>
+                  onExplanationPicChange(
+                    e.target.value ? e.target.value : "none"
+                  )
+                }
+              />
+              <S.Button
+                className="red"
+                onClick={() => onSetQuestionPic("")}
+                tabIndex="-1"
+              >
+                <FontAwesomeIcon icon={faTrashAlt} />
+              </S.Button>
+            </div>
+          </>
         </S.QuestionPicContainer>
       )}
     </>
@@ -97,6 +156,8 @@ const Input = (props) => {
     questionType,
     isCorrectAnswer,
     onIsCorrectAnswerClicked,
+    showAddQuestion,
+    onAddAnswer,
   } = props;
 
   return (
@@ -190,56 +251,16 @@ const QuestionTypePicker = ({
   );
 };
 
-const ExplanationContainer = ({
-  index,
-  explanation,
-  explanationPic,
-  onExplanationPicChange,
-  onExplanationChange,
-}) => {
+const ExplanationContainer = ({ index, explanation, onExplanationChange }) => {
   return (
     <S.QuestionExplContainer>
-      <label htmlFor={`explanation${index}`}>Vysvetlenie:</label>
-      <input
+      <textarea
         id={`explanation${index}`}
+        rows="2"
         placeholder="Vysvetlenie k odpovediam (zobrazí sa po vyplnení kvízu pod otázkou)"
         value={explanation}
         onChange={(e) => onExplanationChange(e.target.value)}
       />
-      <S.Button
-        tabIndex="-1"
-        disabled={explanationPic}
-        className="withText neutral"
-        onClick={() => onExplanationPicChange("none")}
-      >
-        <FontAwesomeIcon icon={faPlus} />
-        <span>Pridať fotku</span>
-      </S.Button>
-      {explanationPic && (
-        <S.QIMGContainer>
-          <S.AnswerContainer>
-            <label>IMG</label>
-            <input
-              onChange={(e) =>
-                onExplanationPicChange(e.target.value ? e.target.value : "none")
-              }
-              maxLength={100}
-              placeholder={`Link na fotku k vysvetleniu`}
-              id={`EXPLpic${index}`}
-              value={explanationPic != "none" ? explanationPic : ""}
-            />
-
-            <S.Button
-              className="red"
-              onClick={() => onExplanationPicChange("")}
-              tabIndex="-1"
-            >
-              <FontAwesomeIcon icon={faTrashAlt} />
-            </S.Button>
-          </S.AnswerContainer>
-          {explanationPic != "none" && <img src={explanationPic} />}
-        </S.QIMGContainer>
-      )}
     </S.QuestionExplContainer>
   );
 };
@@ -254,7 +275,7 @@ export default function FormQuestion({
     if (questionData.answers.length >= CONST.MAX_ANSWER_PER_QUESTION) return;
     setQuestionData({
       ...questionData,
-      answers: [...questionData.answers, { value: "" }],
+      answers: [...questionData.answers, ""],
     });
   };
   const removeAnswer = (index) => {
@@ -341,18 +362,20 @@ export default function FormQuestion({
           onDelete={() => deleteQuestion()}
         />
       ) : (
-        <>
+        <S.QuestionContainer>
           <QuestionInput
             index={questionIndex}
             value={questionData.question}
             onValueChange={(q) => setQuestionTitle(q)}
             onDelete={() => deleteQuestion()}
-            showAddQuestion={
-              questionData.answers.length < CONST.MAX_ANSWER_PER_QUESTION
-            }
-            onAddAnswer={() => addAnswer()}
             questionPic={questionData.questionPic}
             onSetQuestionPic={(src) => setQuestionPic(src)}
+            onAddAnswer={() => addAnswer()}
+            answerAddEnabled={
+              questionData.answers.length < CONST.MAX_ANSWER_PER_QUESTION
+            }
+            explanationPic={questionData.explanationPic}
+            onExplanationPicChange={(e) => setExplanationPic(e)}
           />
 
           <S.AnswersContainer>
@@ -376,7 +399,7 @@ export default function FormQuestion({
             onExplanationChange={(e) => setExplanation(e)}
             onExplanationPicChange={(e) => setExplanationPic(e)}
           />
-        </>
+        </S.QuestionContainer>
       )}
     </S.QuestionWrapper>
   );

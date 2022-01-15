@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as S from "./src/styled";
 import styled from "styled-components";
 import { downloadFile } from "../../utils/downloadFile";
+import quiz003 from "../quiz003.json";
 
 const Button = styled(S.Button)`
   //position: absolute;
@@ -24,21 +25,28 @@ const ButtonsRow = styled.div`
 `;
 
 const RowQuestionContainer = styled(S.RowQuestionContainer)`
+  justify-content: flex-start;
+  align-items: center;
+
   &.title {
-    width: 700px;
+    width: 400px;
+  }
+  &.title2 {
+    width: 650px;
   }
 
   label {
     width: 120px;
+    text-align: left;
   }
   input {
-    height: 100%;
-    width: calc(100% - 140px);
+    height: 85px;
+    width: calc(100% - 40px);
     border: none;
     padding: 0 10px;
   }
   textarea {
-    width: calc(100% - 140px);
+    width: 100%;
   }
 `;
 
@@ -201,15 +209,20 @@ const FileUploadContainer = styled.div`
 
 export default function Index() {
   const inputFile = useRef(null);
-  const [title, setTitle] = useState("");
-  const [summary, setSummary] = useState("");
-  const [questions, setQuestions] = useState([]);
-  const [winnerTexts, setWinnerTexts] = useState([]);
+  //const [title, setTitle] = useState("");
+  //const [summary, setSummary] = useState("");
+  //const [questions, setQuestions] = useState([]);
+  //const [winnerTexts, setWinnerTexts] = useState([]);
   const [loadedFromFile, setLoadedFromFile] = useState(false);
   const [errors, setErrors] = useState("");
 
+  const [title, setTitle] = useState(quiz003.quizTitle);
+  const [summary, setSummary] = useState(quiz003.quizSynopsis);
+  const [questions, setQuestions] = useState(quiz003.questions);
+  const [winnerTexts, setWinnerTexts] = useState(quiz003.winnerTexts);
+
   useEffect(() => {
-    //addWinnerText();
+    //setLoadedFromFile(true);
   }, []);
 
   const addQuestion = () => {
@@ -362,6 +375,7 @@ export default function Index() {
       return array;
     });
   };
+
   const onFileOpenClick = async (e) => {
     var fr = new FileReader();
     fr.readAsText(e.target.files[0]);
@@ -375,7 +389,7 @@ export default function Index() {
       setLoadedFromFile(true);
     };
   };
-
+  /*
   useEffect(() => {
     if (!loadedFromFile) {
       setQuestions([]);
@@ -383,8 +397,7 @@ export default function Index() {
       setSummary("");
       setWinnerTexts([]);
     }
-  }, [loadedFromFile]);
-  console.log(errors.split("\n"));
+  }, [loadedFromFile]);*/
 
   return (
     <div>
@@ -399,7 +412,7 @@ export default function Index() {
             onChange={(e) => onTitleSet(e.target.value)}
           />
         </RowQuestionContainer>
-        <RowQuestionContainer className="title">
+        <RowQuestionContainer className="title2">
           <label>Popis kvízu:</label>
           <textarea
             rows="2"
