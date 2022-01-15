@@ -209,17 +209,17 @@ const FileUploadContainer = styled.div`
 
 export default function Index() {
   const inputFile = useRef(null);
-  //const [title, setTitle] = useState("");
-  //const [summary, setSummary] = useState("");
-  //const [questions, setQuestions] = useState([]);
-  //const [winnerTexts, setWinnerTexts] = useState([]);
+  const [title, setTitle] = useState("");
+  const [summary, setSummary] = useState("");
+  const [questions, setQuestions] = useState([]);
+  const [winnerTexts, setWinnerTexts] = useState([]);
   const [loadedFromFile, setLoadedFromFile] = useState(false);
   const [errors, setErrors] = useState("");
 
-  const [title, setTitle] = useState(quiz003.quizTitle);
-  const [summary, setSummary] = useState(quiz003.quizSynopsis);
-  const [questions, setQuestions] = useState(quiz003.questions);
-  const [winnerTexts, setWinnerTexts] = useState(quiz003.winnerTexts);
+  // const [title, setTitle] = useState(quiz003.quizTitle);
+  // const [summary, setSummary] = useState(quiz003.quizSynopsis);
+  // const [questions, setQuestions] = useState(quiz003.questions);
+  // const [winnerTexts, setWinnerTexts] = useState(quiz003.winnerTexts);
 
   useEffect(() => {
     //setLoadedFromFile(true);
@@ -389,7 +389,7 @@ export default function Index() {
       setLoadedFromFile(true);
     };
   };
-  /*
+
   useEffect(() => {
     if (!loadedFromFile) {
       setQuestions([]);
@@ -397,7 +397,7 @@ export default function Index() {
       setSummary("");
       setWinnerTexts([]);
     }
-  }, [loadedFromFile]);*/
+  }, [loadedFromFile]);
 
   return (
     <div>
