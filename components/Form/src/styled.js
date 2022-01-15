@@ -153,7 +153,7 @@ export const QuestionWrapper = styled.div`
 `;
 export const QIMGContainer = styled.div`
   img {
-    width: 323px;
+    width: 291px;
     margin-left: 5px;
   }
 `;
